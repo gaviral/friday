@@ -6,6 +6,7 @@ assistant
 
 [reference](https://towardsdatascience.com/building-a-simple-voice-assistant-for-your-mac-in-python-62247543b626)
 
+1. install the following softwares/packages
 ```zsh
 brew install portaudio      # access to microphone
 brew install elasticsearch  # query-query matching and return a response
@@ -15,6 +16,7 @@ python3 -m pip install pyaudio
 python3 -m pip install elasticsearch
 
 ```
+2. Run ElasticSearch server by simply entering: `elasticsearch` in your terminal.
 
 ---
 
