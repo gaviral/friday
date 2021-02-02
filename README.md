@@ -2,6 +2,10 @@
 
 assistant
 
+## Screenshots
+
+<img width="1770" alt="Screen Shot 2021-02-02 at 12 28 00 AM" src="https://user-images.githubusercontent.com/12901566/106572754-b0baf000-64ed-11eb-862b-41638a6024c3.png">
+
 ## Setup
 
 [reference](https://towardsdatascience.com/building-a-simple-voice-assistant-for-your-mac-in-python-62247543b626)
