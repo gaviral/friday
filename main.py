@@ -4,6 +4,16 @@ import subprocess
 import speech_recognition as sr
 from elasticsearch import Elasticsearch
 from elasticsearch.helpers import bulk
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+
+
+def search_google(query):
+    browser = webdriver.Chrome() # TODO: fix chromedriver issues
+    browser.get('https://www.google.com')
+    search = browser.find_element_by_name('q')
+    search.send_keys(query)
+    search.send_keys(Keys.RETURN)
 
 
 def apps_setup(_es):
@@ -50,11 +60,14 @@ def listen():
 
 
 def run_command(_es, _transcript):
-    sys_command = search_es(_es, _transcript)
 
-    if sys_command.split(" ")[0] in ["open"]:
+    if _transcript.split(" ")[0] in ["open"]:
+        sys_command = search_es(_es, _transcript)
         say(f"Opening {_transcript.split(' ', 1)[1]}")
         os.system(sys_command)
+    else:
+        say(f" Searching for {_transcript}")
+        search_google(_transcript)
 
 
 if __name__ == '__main__':
