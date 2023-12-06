@@ -1,6 +1,6 @@
-# friday
+# Friday
 
-assistant
+Voice-driven assistant
 
 ## Screenshots
 
